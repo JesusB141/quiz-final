@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/utilidades.js"></script>
+</head>
+<body>
+    <h1>Lectores Por ti</h1>
+    <select id="dropList" onchange="mostrarDatosSeleccionado()">
+        <option value="">Seleccione un libro</option>
+    </select>
+    <table id="table" border="1">
+        <tr>
+            <th>publisher</th>
+            <th>description</th>
+            <th>price</th>
+            <th>title</th>
+            <th>author</th>
+            <th>contributor</th>
+            <th>contributor_note</th>
+            <th>book_image</th>
+        </tr>
+    </table>
+    <button onclick="mostrarDatosSeleccionado()">mostrar libros</button>
+    
+</body>
+</html>
