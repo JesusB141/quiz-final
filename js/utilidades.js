@@ -6,25 +6,25 @@ function obtenerLibros() {
     .then(libros => {
 
         librosDatos = libros.results.books  
-            agregarLibrosdropList(librosDatos)
+            agregarLibrosAlDropdown(librosDatos)
 
 
     })
 }
-function agregarLibrosdropList(libros) {
-    const dropList = document.getElementById("dropList")
-    dropList.innerHTML = '<option value="">Seleccione un libro</option>'
+function agregarLibrosAlDropdown(libros) {
+    const dropdown = document.getElementById("dropdown")
+    dropdown.innerHTML = '<option value="">Seleccione un libro</option>'
     
     libros.forEach((libro, index) => {
         const option = document.createElement("option")
         option.value = index
         option.textContent = libro.title
-        dropList.appendChild(option)
+        dropdown.appendChild(option)
     });
 }
 function mostrarDatosSeleccionado() {
-    const dropList = document.getElementById("dropList")
-    const IndexSeleccionado = dropList.value
+    const dropdown = document.getElementById("dropdown")
+    const IndexSeleccionado = dropdown.value
     const tabla = document.getElementById("table").getElementsByTagName("tbody")[0]
     
    
